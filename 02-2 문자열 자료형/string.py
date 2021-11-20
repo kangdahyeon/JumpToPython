@@ -36,59 +36,50 @@ print(s[19:])   # You need Python
 print(s[:17])   # Life is too short
 print(s[:])
 print(s[19:-7]) # You need
+print(s[-6:])
+print(s[:])
 
-data = '2021/11/16 11:11:11 Mon'
+data = '2021/11/16 10:04:25 Tue'
 date = data[:10]
-time = data[-12:]
 print(date)
-print(time)
 
-# 문자열 조작하기(method 사용)
-# - 문자열 바꾸기
-text = 'Hello, world!'
+#문자열 조작하기(method)사용
+text = 'Hello world'
 print(text)
-text = text.replace('world', 'python')
+text = text.replace('world','python')
 print(text)
-
-# - 문자열 분리하기
-list = 'apple pear grape pineapple orange'.split()
-print(list)
-list = 'apple, pear, grape, pineapple, orange'.split(', ')
-print(list)
-
-# - 구분자 문자열과 문자열 리스트 연결하기
-fruit = '/'.join(['apple', 'pear', 'grape', 'pineapple', 'orange'])
-print(fruit)
-print(type(fruit))
+# - 구분자로 문자열과 문자열 리스트 연결
+print('/'.join('apple'))
+fruits = ('/'.join(['apple', 'pear', 'grape', 'orange']))
+print(fruits)
 
 # - 대소문자 바꾸기
 print('python'.upper()); print('python'.lower())
 
-# - 공백삭제하기
-txt1 = '   Python   '
-print(txt1.lstrip())
-print(txt1.rstrip())
-print(txt1.strip())
+# 공백 삭제하기
+txt1 = '       python           '
+print(len(txt1))
+txt1 = txt1.strip()
+print(len(txt1))
 
-# - 특정 문자 삭제하기
-txt2 = ', python.'
-print(txt2.lstrip(',.'))
-print(txt2.rstrip(',.'))
-print(txt2.strip(',.'))
-
-# (참고)구두점 삭제
+# 구두점 삭제
 import string
 print(string)
 print(string.punctuation)
-
-print(txt2.strip(string.punctuation))
+txt2 = ', python.'
 print(txt2.strip(string.punctuation + ' '))
 
-# - 문자열 정렬하기
+#문자열 정렬
+txt3 = 'Hello'
+t = txt3.rjust(10)
+print(t)
 
+# 메서드 체이닝
+print('.'.join('python').upper().split('.'))
 
+# 문자열 왼쪽에 '0' 채우기
+print('3500'.zfill(10))
 
-
-
-
+# 문자열 위치 찾기 
+print('apple pineapple'.find('pl'))
 

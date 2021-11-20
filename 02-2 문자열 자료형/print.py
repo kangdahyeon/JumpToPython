@@ -24,5 +24,6 @@ minute = 43
 second = 59
  # 2010/11/16 11:43:59
 
-
+print(year, month, day, sep="/", end=" ")
+print(hour, minute, second, sep=";")
 
